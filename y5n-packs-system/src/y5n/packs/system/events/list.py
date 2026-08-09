@@ -12,25 +12,23 @@ from y5n.sdk import io, store
 async def main():
     db = store()
 
-    results = await db.scan(
+    keys, _ = await db.scan(
         namespace=Namespace("system", "activity", "global"),
         index_key=IndexKey("all"),
         value="1",
     )
-    if not results:
+    if not keys:
         await io.write("No events recorded.")
         return
 
     rows = []
-    for r in results:
-        if r is None or r.key is None:
-            continue
-        history = await db.history(key=r.key)
+    for key in keys:
+        history = await db.history(key=key)
         if not history:
             continue
         rev = history[-1]
         data = rev.get("data") or {}
-        rows.append((rev.get("ts"), str(r.key), data))
+        rows.append((rev.get("ts"), str(key), data))
 
     rows.sort(key=lambda x: x[0] or "", reverse=True)
 
