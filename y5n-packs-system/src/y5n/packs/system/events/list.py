@@ -7,11 +7,11 @@ subsystem; it is a saved view over the Event Store.
 from y5n.runtime.api.naming import Namespace
 from y5n.runtime.store.event.models import IndexKey
 from y5n.sdk import io
-from y5n.sdk.store import StoreClient
+from y5n.sdk import store as store_factory
 
 
 async def main():
-    store = StoreClient()
+    store = store_factory()
 
     results = await store.scan(
         namespace=Namespace("system", "activity", "global"),
