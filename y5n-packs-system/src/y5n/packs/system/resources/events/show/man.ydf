@@ -19,6 +19,11 @@ Shows the full record of one event: its kind, timestamp, payload, and the
 context envelope it carried — the actor, session, and command behind it.
 </paragraph>
 
+<paragraph>
+The id may be abbreviated to any unique prefix (Git-style). If the prefix
+matches more than one event, the matches are listed.
+</paragraph>
+
 <heading level="2">
 See also
 </heading>

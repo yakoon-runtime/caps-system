@@ -5,6 +5,11 @@ contextual: false
 host: /boot/python/runtime
 entry:
   run: pack:y5n.packs.system.events.show:main
+invocation:
+  params:
+  - key: id
+    required: true
+    positional: true
 resources:
   ref: resource:y5n.packs.system.resources.loader:content
   man:

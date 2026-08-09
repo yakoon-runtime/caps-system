@@ -7,7 +7,7 @@ Usage
 </heading>
 
 <pre>
-  events list
+  events list [--limit N]
 </pre>
 
 <heading level="2">
@@ -15,9 +15,9 @@ Description
 </heading>
 
 <paragraph>
-Lists the activity events recorded by the runtime, newest first. An event
-records what a session did, asked for, or was refused — a read, a denied
-operation, a login failure, or a completed command.
+Lists the activity events recorded by the runtime, newest first (default
+20). An event records what a session did, asked for, or was refused — a
+read, a denied operation, a login failure, or a completed command.
 </paragraph>
 
 <paragraph>

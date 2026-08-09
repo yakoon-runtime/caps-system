@@ -6,12 +6,14 @@ subsystem; it is a saved view over the Event Store.
 
 from y5n.runtime.api.naming import Namespace
 from y5n.runtime.store.event.models import IndexKey
-from y5n.sdk import io, store
+from y5n.sdk import context, io, store
 
 
 async def main():
-    db = store()
+    req = context.request()
+    limit = int(req.option("limit", default=20))
 
+    db = store()
     keys, _ = await db.scan(
         namespace=Namespace("system", "activity", "global"),
         index_key=IndexKey("all"),
@@ -31,9 +33,10 @@ async def main():
         rows.append((rev.get("ts"), str(key), data))
 
     rows.sort(key=lambda x: x[0] or "", reverse=True)
+    rows = rows[:limit]
 
     await io.write("Events:", mode="append")
     for ts, key, data in rows:
         kind = data.get("kind", "?")
         short_id = key.rsplit("#", 1)[-1][:8]
-        await io.write(f"  [{short_id}] {kind}  {ts}", mode="append")
+        await io.write(f"  {short_id}  {kind}  {ts}", mode="append")

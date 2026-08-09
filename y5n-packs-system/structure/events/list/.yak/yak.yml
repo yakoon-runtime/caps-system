@@ -5,6 +5,9 @@ contextual: false
 host: /boot/python/runtime
 entry:
   run: pack:y5n.packs.system.events.list:main
+invocation:
+  params:
+  - key: limit
 resources:
   ref: resource:y5n.packs.system.resources.loader:content
   man:
