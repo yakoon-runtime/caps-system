@@ -1,0 +1,6 @@
+title: Events
+
+resolvable: true
+navigable: true
+contextual: false
+host: /boot/python/runtime

@@ -1,0 +1,34 @@
+<heading>events list - Show the runtime's history.</heading>
+
+<rule/>
+
+<heading level="2">
+Usage
+</heading>
+
+<pre>
+  events list
+</pre>
+
+<heading level="2">
+Description
+</heading>
+
+<paragraph>
+Lists the activity events recorded by the runtime, newest first. An event
+records what a session did, asked for, or was refused — a read, a denied
+operation, a login failure, or a completed command.
+</paragraph>
+
+<paragraph>
+Every event is written by the runtime itself, never by a command. There is
+no legitimate way to change state without the runtime knowing (ADR-17).
+</paragraph>
+
+<heading level="2">
+See also
+</heading>
+
+<paragraph>
+events show, man
+</paragraph>

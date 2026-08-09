@@ -1,0 +1,28 @@
+<heading>events show - Inspect a single event.</heading>
+
+<rule/>
+
+<heading level="2">
+Usage
+</heading>
+
+<pre>
+  events show ID
+</pre>
+
+<heading level="2">
+Description
+</heading>
+
+<paragraph>
+Shows the full record of one event: its kind, timestamp, payload, and the
+context envelope it carried — the actor, session, and command behind it.
+</paragraph>
+
+<heading level="2">
+See also
+</heading>
+
+<paragraph>
+events list, man
+</paragraph>
