@@ -5,8 +5,7 @@ context envelope (actor, session, command, trace) it carried.
 """
 
 from y5n.runtime.api.naming import Key
-from y5n.sdk import context, io
-from y5n.sdk import store as store_factory
+from y5n.sdk import context, io, store
 
 
 async def main():
@@ -19,8 +18,8 @@ async def main():
     event_id = args[0]
     key = Key.from_parts("system", "activity", "global", event_id)
 
-    store = store_factory()
-    history = await store.history(key=key)
+    db = store()
+    history = await db.history(key=key)
     if not history:
         await io.write(f"No event found: {event_id}")
         return

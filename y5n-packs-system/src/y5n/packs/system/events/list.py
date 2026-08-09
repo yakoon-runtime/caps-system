@@ -6,14 +6,13 @@ subsystem; it is a saved view over the Event Store.
 
 from y5n.runtime.api.naming import Namespace
 from y5n.runtime.store.event.models import IndexKey
-from y5n.sdk import io
-from y5n.sdk import store as store_factory
+from y5n.sdk import io, store
 
 
 async def main():
-    store = store_factory()
+    db = store()
 
-    results = await store.scan(
+    results = await db.scan(
         namespace=Namespace("system", "activity", "global"),
         index_key=IndexKey("all"),
         value="1",
@@ -26,7 +25,7 @@ async def main():
     for r in results:
         if r is None or r.key is None:
             continue
-        history = await store.history(key=r.key)
+        history = await db.history(key=r.key)
         if not history:
             continue
         rev = history[-1]
