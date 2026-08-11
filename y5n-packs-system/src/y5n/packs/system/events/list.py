@@ -13,7 +13,8 @@ async def main():
     req = context.request()
     limit = int(req.option("limit", default=20))
 
-    db = store.get()
+    db = store.get("runtime")
+
     keys, _ = await db.scan(
         namespace=Namespace("system", "activity", "global"),
         index_key=IndexKey("all"),

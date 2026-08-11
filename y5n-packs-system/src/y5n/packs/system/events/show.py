@@ -37,7 +37,8 @@ async def main():
         return
 
     event_id = req.arg(0)
-    db = store.get()
+
+    db = store.get("runtime")
 
     key, matches = await _resolve_event_key(db, event_id)
     if key is None:
