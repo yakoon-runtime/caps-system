@@ -37,7 +37,7 @@ async def main():
         return
 
     event_id = req.arg(0)
-    db = store()
+    db = store.get()
 
     key, matches = await _resolve_event_key(db, event_id)
     if key is None:
