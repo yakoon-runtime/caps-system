@@ -1,8 +1,8 @@
-from y5n.sdk import context, io, ports
+from y5n.sdk import context, io, session
 
 
 async def main():
-    rows = await ports.get("session").list()
+    rows = await session.list()
 
     if not rows:
         await io.write("No sessions.")

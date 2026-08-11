@@ -1,8 +1,8 @@
-from y5n.sdk import context, io, ports
+from y5n.sdk import context, io, session
 
 
 async def main():
-    rows = await ports.get("session").list()
+    rows = await session.list()
     current_key = context.session().key
     current = next((r for r in rows if r["key"] == current_key), None)
 

@@ -1,10 +1,10 @@
-from y5n.sdk import ports, runtime
+from y5n.sdk import ports, runtime, session
 
 
 async def main():
     doc = ports.get("document")
-    current = await ports.get("session").current()
-    user = current.get("user_name") or ""
+    current = await session.current()
+    user = current.user or ""
 
     result = await doc.render(name="default", state={"user": user})
     await runtime.io.write(result)

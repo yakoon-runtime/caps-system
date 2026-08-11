@@ -1,6 +1,6 @@
-from y5n.sdk import io, ports
+from y5n.sdk import io, session
 
 
 async def main():
-    await ports.get("session").detach()
+    await session.detach()
     await io.write("Detached")
