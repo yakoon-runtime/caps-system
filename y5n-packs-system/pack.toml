@@ -1,4 +1,0 @@
-name = "y5n-packs-system"
-version = "0.8.0"
-description = "System commands: ls, cd, session, net, health, info, mem, pwd, clear, man, su, whoami"
-mount = "/usr/bin"
