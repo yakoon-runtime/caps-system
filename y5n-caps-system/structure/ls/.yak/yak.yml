@@ -1,0 +1,25 @@
+title: Ls
+resolvable: true
+navigable: false
+contextual: false
+host: /boot/python/runtime
+entry:
+  run: pack:y5n.caps.system.ls:main
+invocation:
+  params:
+  - key: target
+    positional: true
+  - key: long
+    kind: flag
+  - key: l
+    kind: flag
+  - key: all
+    kind: flag
+resources:
+  ref: resource:y5n.caps.system.resources.loader:content
+  document:
+    default:
+      path: ls/default.ydf
+  man:
+    default:
+      path: ls/man.ydf

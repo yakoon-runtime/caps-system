@@ -1,4 +1,4 @@
-# pack-system
+# caps-system
 
 The Yakoon system pack — system commands (ls, cd, session, net, health,
 info, mem, pwd, clear, man, su, whoami).
@@ -7,5 +7,5 @@ info, mem, pwd, clear, man, su, whoami).
 
 ```text
 catalog.yml           # ComponentName → relative Location
-y5n-packs-system/     # the component
+y5n-caps-system/     # the component
 ```
