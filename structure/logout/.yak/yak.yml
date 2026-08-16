@@ -1,0 +1,16 @@
+title: Logout
+resolvable: true
+navigable: false
+contextual: false
+anonymous: true
+host: /boot/python/runtime
+entry:
+  run: cap:y5n.caps.ident.apps.logout:main
+resources:
+  ref: resource:y5n.caps.system.resources.loader:content
+  document:
+    default:
+      path: logout/default.ydf
+  man:
+    default:
+      path: logout/man.ydf

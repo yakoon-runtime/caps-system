@@ -1,0 +1,15 @@
+title: Mem
+resolvable: true
+navigable: false
+contextual: false
+host: /boot/python/runtime
+entry:
+  run: cap:y5n.caps.system.mem:main
+resources:
+  ref: resource:y5n.caps.system.resources.loader:content
+  document:
+    default:
+      path: mem/default.ydf
+  man:
+    default:
+      path: mem/man.ydf

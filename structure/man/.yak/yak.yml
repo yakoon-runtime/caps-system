@@ -1,0 +1,15 @@
+title: Man
+resolvable: true
+navigable: false
+contextual: false
+host: /boot/python/runtime
+entry:
+  run: cap:y5n.caps.system.man:main
+resources:
+  ref: resource:y5n.caps.system.resources.loader:content
+  document:
+    default:
+      path: man/default.ydf
+  man:
+    default:
+      path: man/man.ydf

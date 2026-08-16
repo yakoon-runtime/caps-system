@@ -1,0 +1,12 @@
+title: Session List
+resolvable: true
+navigable: false
+contextual: false
+host: /boot/python/runtime
+entry:
+  run: cap:y5n.caps.system.session.list:main
+resources:
+  ref: resource:y5n.caps.system.resources.loader:content
+  man:
+    default:
+      path: session/list/man.ydf

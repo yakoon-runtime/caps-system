@@ -1,0 +1,9 @@
+title: Session
+
+resolvable: true
+navigable: true
+contextual: false
+host: /boot/python/runtime
+
+entry:
+  run: cap:y5n.caps.system.session.list:main
