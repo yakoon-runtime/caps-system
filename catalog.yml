@@ -1,7 +1,5 @@
 components:
-  y5n-caps-system:
-    location: .
-    release: y5n-caps-system-v0.8.0
+  - location: .
 bundles:
   system:
   - y5n-caps-system
