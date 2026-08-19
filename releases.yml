@@ -1,0 +1,5 @@
+components:
+  y5n-caps-system:
+    version: 0.8.0
+    tag: y5n-caps-system-v0.8.0
+    digest: sha256:59c0be27a4b68d8e1f57b89cce307d680201a5a72509ce1f35890d6ff8faa2b8
