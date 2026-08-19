@@ -1,5 +1,6 @@
 components:
-  - location: .
+  y5n-caps-system:
+    location: .
 bundles:
   system:
-  - y5n-caps-system
+    - y5n-caps-system
