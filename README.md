@@ -1,5 +1,7 @@
 # y5n-caps-system
 
+**Status: Active development**
+
 *System commands for Yakoon — navigation, jobs, sessions, and more.*
 
 This package provides the built-in commands that make up the Yakoon
@@ -63,5 +65,10 @@ src/y5n/apps/system/
 ## Tree integration
 
 Each command is registered in the workspace tree via a `.yak/yak.yml`
-entry at the corresponding path in `structure/`. The entry's `pack:`
-directive points to the Python module and `main` function.
+entry at the corresponding path in `structure/`. The entry's `entry.run`
+capability reference points to the Python module and `main` function.
+
+## Links
+
+- Developer setup: [yakoon-runtime/developer](https://github.com/yakoon-runtime/developer)
+- Runtime: [yakoon-runtime/runtime](https://github.com/yakoon-runtime/runtime)
